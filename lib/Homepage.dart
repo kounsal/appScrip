@@ -26,7 +26,6 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            // Search TextField
             TextField(
               controller: searchController,
               decoration: InputDecoration(
@@ -37,12 +36,12 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               onChanged: (value) {
-                usercontroller.searchQuery.value = value; // Update the search query
+                usercontroller.searchQuery.value = value; 
               },
             ),
             const SizedBox(height: 10),
 
-            // User List
+           
             Expanded(
               child: Obx(() {
                 return usercontroller.isLoading.value
